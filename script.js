@@ -1,4 +1,5 @@
 //your JS code here. If required.
+
 // Function to create a promise that resolves after a delay
 function delayedResolve(value, delay) {
   return new Promise((resolve) => {
@@ -21,18 +22,18 @@ document.getElementById('btn').addEventListener('click', () => {
   delayedResolve(inputNumber, 2000)
     .then((number) => {
       document.getElementById('output').textContent = `Result: ${number}`;
-      return delayedResolve(number, 2000);
-    })
-    .then((number) => {
       return delayedResolve(number * 2, 1000);
     })
     .then((number) => {
+      document.getElementById('output').textContent = `Result: ${number}`;
       return delayedResolve(number - 3, 1000);
     })
     .then((number) => {
+      document.getElementById('output').textContent = `Result: ${number}`;
       return delayedResolve(number / 2, 1000);
     })
     .then((number) => {
+      document.getElementById('output').textContent = `Result: ${number}`;
       return delayedResolve(number + 10, 1000);
     })
     .then((number) => {
@@ -43,3 +44,4 @@ document.getElementById('btn').addEventListener('click', () => {
       document.getElementById('output').textContent = 'An error occurred';
     });
 });
+
